@@ -1,6 +1,6 @@
 defmodule FlakyConnection.Transport do
-  defmodule SSL, do: defstruct [:socket]
-  defmodule TCP, do: defstruct [:socket]
+  defmodule(SSL, do: defstruct([:socket]))
+  defmodule(TCP, do: defstruct([:socket]))
 
   def send(%SSL{socket: socket}, data) do
     :ssl.send(socket, data)
